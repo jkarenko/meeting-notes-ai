@@ -8,8 +8,9 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 openai = "^1.8.0"
-fastapi = "^0.109.0"
+fastapi = ">=0.96.0,<0.97.0"
 ffmpeg-python = "^0.2.0"
+reflex = "^0.3.8"
 
 
 [build-system]
