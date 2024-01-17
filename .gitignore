@@ -22,3 +22,5 @@ wheels/
 MANIFEST
 .python-version
 .DS_Store
+deploy.sh
+start-meeting-notes-server.sh
