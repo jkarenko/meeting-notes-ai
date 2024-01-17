@@ -1,7 +1,10 @@
+from os import getenv
 from fastapi import FastAPI
 from meeting_notes_ai.media_handler import MediaHandler
 
-app = FastAPI()
+app = FastAPI(
+    root_path=getenv("ROOT_PATH", "http://localhost:8000"),
+)
 media_handler = MediaHandler()
 
 
