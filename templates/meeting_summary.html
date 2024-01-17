@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meeting Summary</title>
+</head>
+<body>
+    <h1>Meeting Summary</h1>
+    <h2>Abstract Summary</h2>
+    <p id="abstract_summary"></p>
+    <h2>Action Items</h2>
+    <ul id="action_items"></ul>
+    <script>
+        var parsedData = JSON.parse(data);
+        document.getElementById('abstract_summary').innerText = parsedData.abstract_summary;
+        var actionItems = parsedData.action_items;
+        var actionItemsList = document.getElementById('action_items');
+        actionItems.forEach(function(item) {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(item));
+            actionItemsList.appendChild(li);
+        });
+    </script>
+</body>
+</html>
